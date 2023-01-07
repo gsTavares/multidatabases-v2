@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "c79c55ed-17b4-446a-8cae-8a08235b81fa",
+		"name": "api-multidatabase-v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24934162"
+	},
+	"item": [
+		{
+			"name": "listDatabasesCredential",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api-multidatabase-v2/database-credential",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-multidatabase-v2",
+						"database-credential"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveDatabaseCredential",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company\" : {\r\n        \"id\" : 2,\r\n        \"type\": \"COMPANY_B\"\r\n    },\r\n    \"url\": \"jdbc:postgresql://localhost:5432/companyb\",\r\n    \"username\": \"postgres\",\r\n    \"password\": \"postdba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api-multidatabase-v2/database-credential",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-multidatabase-v2",
+						"database-credential"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyType\": \"COMPANY_A\",\r\n    \"fullname\" : \"COMPANY A EMPLOYEE\",\r\n    \"email\" : \"e1123123123@email.com\",\r\n    \"password\": \"asdlkalçsdkalçkd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api-multidatabase-v2/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-multidatabase-v2",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
